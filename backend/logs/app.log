@@ -1211,3 +1211,18 @@
 {"level":"info","message":"BansosChain Server starting up. Environment: development","timestamp":"2026-07-08T17:54:30.871Z"}
 {"level":"info","message":"BansosChain Backend API Server is running on port 5000 in development mode","timestamp":"2026-07-08T17:54:30.896Z"}
 {"level":"info","message":"Successfully connected to MongoDB off-chain database","timestamp":"2026-07-08T17:54:30.934Z"}
+{"level":"warn","message":"Authentication failure attempt for username: dinsos","timestamp":"2026-07-08T18:21:09.824Z"}
+{"level":"warn","message":"[API WARN] POST /api/auth/login - Nama pengguna atau kata sandi salah","timestamp":"2026-07-08T18:21:09.861Z"}
+{"level":"info","message":"Successful login for user: bank with role: bank","timestamp":"2026-07-08T18:21:09.972Z"}
+{"level":"info","message":"Successful login for user: auditor with role: auditor","timestamp":"2026-07-08T18:21:09.994Z"}
+{"level":"warn","message":"Authentication blocked: Authorization header missing token","timestamp":"2026-07-08T18:21:10.028Z"}
+{"level":"warn","message":"[API WARN] POST /api/recipient - Access token required","timestamp":"2026-07-08T18:21:10.034Z"}
+{"level":"warn","message":"Authentication blocked: Authorization header missing token","timestamp":"2026-07-08T18:21:10.062Z"}
+{"level":"warn","message":"[API WARN] POST /api/distribution - Access token required","timestamp":"2026-07-08T18:21:10.063Z"}
+{"level":"warn","message":"Authorization blocked for user 'bank': insufficient permissions. Required roles: [admin]","timestamp":"2026-07-08T18:21:10.102Z"}
+{"level":"warn","message":"[API WARN] POST /api/recipient/revoke - Unauthorized access: insufficient privileges","timestamp":"2026-07-08T18:21:10.103Z"}
+{"level":"info","message":"Fetching block visualizer chain structures or real transaction history","timestamp":"2026-07-08T18:21:10.135Z"}
+{"level":"info","message":"Establishing new Fabric Gateway client connection for: kemensos-user","timestamp":"2026-07-08T18:21:13.070Z"}
+{"level":"error","message":"Failed to connect to Fabric Gateway: DiscoveryService has failed to return results","timestamp":"2026-07-08T18:21:25.380Z"}
+{"level":"error","message":"Failed to fetch transaction history log: Fabric Gateway is unavailable: DiscoveryService has failed to return results","timestamp":"2026-07-08T18:21:25.381Z"}
+{"level":"error","message":"[API ERROR] GET /api/audit/blocks - Error: Fabric Gateway is unavailable: DiscoveryService has failed to return results\n    at getContract (C:\\Users\\HYPE AMD\\Downloads\\Tugas Besar-PBP-final\\backend\\config\\fabricConfig.js:440:26)\n    at async getBlocks (C:\\Users\\HYPE AMD\\Downloads\\Tugas Besar-PBP-final\\backend\\controllers\\auditController.js:97:22)","timestamp":"2026-07-08T18:21:25.381Z"}
