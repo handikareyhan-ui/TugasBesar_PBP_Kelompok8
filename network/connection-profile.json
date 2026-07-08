@@ -1,0 +1,107 @@
+{
+  "name": "BansosChainNetwork",
+  "version": "1.0.0",
+  "client": {
+    "organization": "KemensosOrg",
+    "connection": {
+      "timeout": {
+        "peer": {
+          "endorser": "300"
+        }
+      }
+    }
+  },
+  "organizations": {
+    "KemensosOrg": {
+      "mspid": "KemensosMSP",
+      "peers": [
+        "peer0.kemensos.bansochain.gov.id"
+      ],
+      "certificateAuthorities": [
+        "ca.kemensos"
+      ]
+    },
+    "DinsosOrg": {
+      "mspid": "DinsosMSP",
+      "peers": [
+        "peer0.dinsos.bansochain.gov.id"
+      ],
+      "certificateAuthorities": [
+        "ca.dinsos"
+      ]
+    },
+    "BankOrg": {
+      "mspid": "BankMSP",
+      "peers": [
+        "peer0.bank.bansochain.gov.id"
+      ],
+      "certificateAuthorities": [
+        "ca.bank"
+      ]
+    }
+  },
+  "peers": {
+    "peer0.kemensos.bansochain.gov.id": {
+      "url": "grpcs://localhost:7051",
+      "tlsCACerts": {
+        "path": "./crypto-config/peerOrganizations/kemensos.bansochain.gov.id/peers/peer0.kemensos.bansochain.gov.id/tls/ca.crt"
+      },
+      "grpcOptions": {
+        "ssl-target-name-override": "peer0.kemensos.bansochain.gov.id",
+        "hostnameOverride": "peer0.kemensos.bansochain.gov.id"
+      }
+    },
+    "peer0.dinsos.bansochain.gov.id": {
+      "url": "grpcs://localhost:8051",
+      "tlsCACerts": {
+        "path": "./crypto-config/peerOrganizations/dinsos.bansochain.gov.id/peers/peer0.dinsos.bansochain.gov.id/tls/ca.crt"
+      },
+      "grpcOptions": {
+        "ssl-target-name-override": "peer0.dinsos.bansochain.gov.id",
+        "hostnameOverride": "peer0.dinsos.bansochain.gov.id"
+      }
+    },
+    "peer0.bank.bansochain.gov.id": {
+      "url": "grpcs://localhost:9051",
+      "tlsCACerts": {
+        "path": "./crypto-config/peerOrganizations/bank.bansochain.gov.id/peers/peer0.bank.bansochain.gov.id/tls/ca.crt"
+      },
+      "grpcOptions": {
+        "ssl-target-name-override": "peer0.bank.bansochain.gov.id",
+        "hostnameOverride": "peer0.bank.bansochain.gov.id"
+      }
+    }
+  },
+  "certificateAuthorities": {
+    "ca.kemensos": {
+      "url": "https://localhost:7054",
+      "caName": "ca.kemensos",
+      "tlsCACerts": {
+        "path": "./crypto-config/peerOrganizations/kemensos.bansochain.gov.id/ca/ca.kemensos.bansochain.gov.id-cert.pem"
+      },
+      "httpOptions": {
+        "verify": false
+      }
+    },
+    "ca.dinsos": {
+      "url": "https://localhost:8054",
+      "caName": "ca.dinsos",
+      "tlsCACerts": {
+        "path": "./crypto-config/peerOrganizations/dinsos.bansochain.gov.id/ca/ca.dinsos.bansochain.gov.id-cert.pem"
+      },
+      "httpOptions": {
+        "verify": false
+      }
+    },
+    "ca.bank": {
+      "url": "https://localhost:9054",
+      "caName": "ca.bank",
+      "tlsCACerts": {
+        "path": "./crypto-config/peerOrganizations/bank.bansochain.gov.id/ca/ca.bank.bansochain.gov.id-cert.pem"
+      },
+      "httpOptions": {
+        "verify": false
+      }
+    }
+  }
+}

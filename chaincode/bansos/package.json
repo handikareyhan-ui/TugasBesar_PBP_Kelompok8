@@ -1,0 +1,21 @@
+{
+  "name": "bansos-chaincode",
+  "version": "1.0.0",
+  "description": "Chaincode for Bansos accountability system",
+  "main": "index.js",
+  "engines": {
+    "node": ">=18"
+  },
+  "scripts": {
+    "start": "fabric-chaincode-node start"
+  },
+  "dependencies": {
+    "fabric-contract-api": "^2.5.4",
+    "fabric-shim": "^2.5.4",
+    "snarkjs": "^0.7.4"
+  },
+  "devDependencies": {
+    "eslint": "^8.0.0"
+  },
+  "license": "Apache-2.0"
+}

@@ -1,0 +1,31 @@
+OrdererOrgs:
+  - Name: Orderer
+    Domain: bansochain.gov.id
+    EnableNodeOUs: true
+    Specs:
+      - Hostname: orderer
+
+PeerOrgs:
+  - Name: KemensosOrg
+    Domain: kemensos.bansochain.gov.id
+    EnableNodeOUs: true
+    Template:
+      Count: 1
+    Users:
+      Count: 1
+
+  - Name: DinsosOrg
+    Domain: dinsos.bansochain.gov.id
+    EnableNodeOUs: true
+    Template:
+      Count: 1
+    Users:
+      Count: 1
+
+  - Name: BankOrg
+    Domain: bank.bansochain.gov.id
+    EnableNodeOUs: true
+    Template:
+      Count: 1
+    Users:
+      Count: 1

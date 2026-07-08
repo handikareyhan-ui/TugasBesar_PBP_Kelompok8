@@ -1,0 +1,54 @@
+test:
+  name: bansos-eligibility-benchmark
+  description: Benchmarking ZKP eligibility verification transactions on the BansosChain network.
+  clients:
+    type: local
+    number: 5
+  rounds:
+    - label: registerRecipient
+      description: Benchmark registering social assistance recipients on-chain.
+      txNumber: 100
+      rateControl:
+        type: fixed-rate
+        opts:
+          tps: 20
+      workload:
+        module: caliper/workload/registerRecipient.js
+        arguments:
+          contractId: bansocc
+
+    - label: verifyZKP
+      description: Submit ZKP verification results for social assistance recipients.
+      txNumber: 100
+      rateControl:
+        type: fixed-rate
+        opts:
+          tps: 15
+      workload:
+        module: caliper/workload/verifyEligibility.js
+        arguments:
+          contractId: bansocc
+
+    - label: distributeFunds
+      description: Benchmark funds disbursement transactions.
+      txNumber: 100
+      rateControl:
+        type: fixed-rate
+        opts:
+          tps: 25
+      workload:
+        module: caliper/workload/distributeFunds.js
+        arguments:
+          contractId: bansocc
+
+    - label: queryHistory
+      description: Read-only query transaction history benchmark.
+      txNumber: 200
+      rateControl:
+        type: fixed-rate
+        opts:
+          tps: 50
+      workload:
+        module: caliper/workload/queryHistory.js
+        arguments:
+          contractId: bansocc
